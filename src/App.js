@@ -13,7 +13,7 @@ function App() {
       
       <Router>
         <NavBar />
-        <Route path="/"><Home /></Route>
+        <Route exact path="/"><Home /></Route>
         <Route path="/pokemonlist"><PokemonList /></Route>
         <Route path="/pokedex"><Pokedex /></Route>
         <Route path="/aboutus"><AboutUs /></Route>
