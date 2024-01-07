@@ -11,7 +11,8 @@ export default function NavBar(){
     }
 
     const active = {
-        color:'red'
+        color:'red',
+        fontStyle:"italic"
 
     }
 

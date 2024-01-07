@@ -32,14 +32,13 @@ body {
 }
 
 .title {
-  margin-top: 0px;
-  background-color: pink;
+  border: 1px solid yellowgreen;
 }
 nav {
   
   margin-left: 10px;
   display: flex;
-  gap: 1em;
+  gap: 3em;
   justify-content: center;
 }
 
