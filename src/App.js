@@ -5,14 +5,14 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Pokedex from './pages/Pokedex';
 import PokemonList from './pages/PokemonList';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
       
       <Router>
-        <NavBar />
+        <Header />
         <Route exact path="/"><Home /></Route>
         <Route path="/pokemonlist"><PokemonList /></Route>
         <Route path="/pokedex"><Pokedex /></Route>

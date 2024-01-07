@@ -2,7 +2,7 @@
 export default function Home (){
     return (
         <div>
-            <h1> Welcom come to El-pokemon</h1>
+            <h2> Welcom come to El-pokemon</h2>
         </div>
     )
 }

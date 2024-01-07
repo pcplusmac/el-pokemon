@@ -1,3 +1,6 @@
+body {
+  overflow: auto;
+}
 .App {
   text-align: center;
 }
@@ -28,11 +31,16 @@
   color: #61dafb;
 }
 
+.title {
+  margin-top: 0px;
+  background-color: pink;
+}
 nav {
   
   margin-left: 10px;
   display: flex;
   gap: 1em;
+  justify-content: center;
 }
 
 @keyframes App-logo-spin {
