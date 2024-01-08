@@ -39,7 +39,10 @@
   display: flex;
   flex-wrap:wrap;
   gap: 2em;
-  /* margin: 1em; */
+  width: 95%;
+  height: auto;
+  justify-content: center;
+  
 }
 
 .poke-card {
