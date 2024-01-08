@@ -5,8 +5,12 @@ import AboutUs from './pages/AboutUs';
 import Pokedex from './pages/Pokedex';
 import PokemonList from './pages/PokemonList';
 import Header from './components/Header';
+import { useState,useEffect } from 'react';
 
 function App() {
+
+  
+
   return (
     <div className="App">
       
