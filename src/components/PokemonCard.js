@@ -1,8 +1,8 @@
 
 export default function PokemonCard({pokemon}){
     return (
-        <div>
-            {pokemon.name}
+        <div className="poke-card">
+           <h2>{pokemon.name}</h2>
 
         </div>
     )

@@ -1,7 +1,11 @@
-export default function Pokedex (){
+export default function Pokedex (props){
     return (
         <div>
-            <h1> Pokedex: select to import</h1>
+            <h1> select to import</h1>
+            <div className="pokemon-canvas">
+                {props.pokeCards}
+
+            </div>
         </div>
     )
 }
