@@ -1,8 +1,13 @@
 
 export default function PokemonCard({pokemon}){
+
+    console.log("in card:",pokemon)
     return (
         <div className="poke-card">
-           <h2>{pokemon.name}</h2>
+                <figure>
+                    <img id="card-solo" src={pokemon.sprites.back_default} />
+                    <figcaption><h5>{pokemon.name}</h5></figcaption>
+                </figure>
 
         </div>
     )
