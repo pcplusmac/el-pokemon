@@ -7,6 +7,7 @@ import PokemonList from './pages/PokemonList';
 import Header from './components/Header';
 import { useState,useEffect } from 'react';
 import PokemondCard from './components/PokemonCard'
+import PokeSolo from './pages/PokeSolo';
 
 function App() {
 
@@ -37,7 +38,8 @@ function App() {
         <Header />
         <Route exact path="/"><Home /></Route>
         <Route path="/pokemonlist"><PokemonList  /></Route>
-        <Route path="/pokedex"><Pokedex pokeCards={mappedPokeCards}/></Route>
+        <Route exact path="/pokedex"><Pokedex pokeCards={mappedPokeCards}/></Route>
+        <Route path="/pokedex/:name" component={PokeSolo} ></Route>
         <Route path="/aboutus"><AboutUs /></Route>
       </Router>
       
