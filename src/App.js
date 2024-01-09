@@ -8,7 +8,9 @@ import Header from './components/Header';
 import { useState, useEffect } from 'react';
 import PokemondCard from './components/PokemonCard'
 import PokeSolo from './pages/PokeSolo';
-// import { PokemonContextProvider } from './context/PokemonContext';
+import { PokemonContextProvider } from './context/PokemonContext';
+import PokemonCard from './components/PokemonCard';
+import PokemonDetails from './components/PokemonDetails';
 
 function App() {
 
@@ -32,6 +34,13 @@ function App() {
   const mappedPokeCards = pokeState.map((poke, index) => <PokemondCard key={index} pokemon={poke} />)
   return (
     <div className="App">
+
+      {/* <PokemonContextProvider>
+        <PokemonCard />
+        <PokemonDetails />
+      </PokemonContextProvider> */}
+
+
       <Router>
         <Header />      
           <Route exact path="/"><Home /></Route>

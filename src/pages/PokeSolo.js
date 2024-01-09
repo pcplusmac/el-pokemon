@@ -1,6 +1,7 @@
 // import { useContext } from "react"
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
+import PokemonDetails from "../components/PokemonDetails"
 
 export default function PokeSolo() {
 
@@ -22,26 +23,11 @@ export default function PokeSolo() {
 
     return (
         <>
-            <div>
-                <h2>{state.name}</h2>
-                <img id="card-solo" src={state.sprites.back_default} alt={state.name} />
-            </div>
+            
+            <img id="card-solo" src={state.sprites.back_default} alt={state.name} style={{justifyContent:"center"}} />
 
-            <div className="solodetails-container" style={{ marginLeft: "2px" }}>
-
-                <h3>Height:</h3>
-                <p>{state.height}</p>
-                <h3>Weight:</h3>
-                <p>{state.weight}</p>
-                <h3>Moves:</h3>
-                <p>{ }</p>
-                <h3>Ablities:</h3>
-                
-                <p>
-                    <li>{listAbilities}</li>
-                </p>
-
-
+            <div className="solodetails-container">
+              <PokemonDetails state={state}/>
             </div>
             <div className="button-container">
                 <button>back</button>

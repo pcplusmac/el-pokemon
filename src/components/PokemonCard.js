@@ -1,6 +1,7 @@
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 
 
+
 export default function PokemonCard({pokemon}){
 
     const history = useHistory()
