@@ -5,6 +5,9 @@ import PokemonDetails from "../components/PokemonDetails"
 export default function PokeSolo() {
 
     const { state } = useLocation()
+    function backClick(){
+        
+    }
 
     return (
         <>
@@ -15,7 +18,7 @@ export default function PokeSolo() {
               <PokemonDetails state={state}/>
             </div>
             <div className="button-container">
-                <button>back</button>
+                <button onClick={backClick}>back</button>
                 <button>save to myList</button>
             </div >
 

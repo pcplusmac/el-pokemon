@@ -10,7 +10,7 @@ export default function PokemonCard({pokemon}){
         history.push(`/Pokedex/${pokemon.name}`,pokemon)
 
     }
-    console.log("in card:",pokemon)
+    // console.log("in card:",pokemon)
     return (
         <div className="poke-card" onClick={showSoloClick}>
                 <figure>
