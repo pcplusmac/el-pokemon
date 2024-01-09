@@ -9,11 +9,24 @@ export default function PokeSolo() {
     console.log("in solo:", history)
     const { state } = useLocation()
 
+    const abilities = state.abilities.map(ability=>ability.name)
+    console.log("abilities",abilities)
+
     return (
         <>
-            <div className="solopage-container">
-                <h1> poke sole page</h1>
+            <div>
                 <h2>{state.name}</h2>
+                <img id="card-solo" src={state.sprites.back_default} alt={state.name}/>
+            </div>
+            
+            <div className="solodetails-container" style={{marginLeft:"2px"}}>
+                
+            
+                    <h3>Ablities:</h3>
+                    <ul>
+                        <li>{abilities}</li>
+                    </ul>
+            
 
             </div>
             <div className="button-container">
