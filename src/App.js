@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Pokedex from './pages/Pokedex';
-import PokemonList from './pages/PokemonList';
+import MyList from './pages/MyList';
 import Header from './components/Header';
 import { useState, useEffect } from 'react';
 import PokemondCard from './components/PokemonCard'
@@ -11,6 +11,7 @@ import PokeSolo from './pages/PokeSolo';
 import { PokemonContextProvider } from './context/PokemonContext';
 import PokemonCard from './components/PokemonCard';
 import PokemonDetails from './components/PokemonDetails';
+
 
 function App() {
 
@@ -44,7 +45,7 @@ function App() {
       <Router>
         <Header />      
           <Route exact path="/"><Home /></Route>
-          <Route path="/pokemonlist"><PokemonList /></Route>
+          <Route path="/pokemonlist"><MyList /></Route>
           <Route exact path="/pokedex">         
               <Pokedex pokeCards={mappedPokeCards} /></Route>
           <Route path="/pokedex/:name" component={PokeSolo} ></Route>
