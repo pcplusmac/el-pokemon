@@ -1,5 +1,10 @@
 
 export default function PokemonDetails({ state }) {
+    
+    
+    
+    
+    
     return (
         <> 
             <h3> Name: <span>{state.name}</span></h3>

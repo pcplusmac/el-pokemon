@@ -1,25 +1,10 @@
 // import { useContext } from "react"
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min"
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 import PokemonDetails from "../components/PokemonDetails"
 
 export default function PokeSolo() {
 
-    const history = useHistory()
-
-    console.log("in solo:", history)
     const { state } = useLocation()
-
-    const abilities = state.abilities.map(ability => { return ability.ability.name })
-    // console.log("abilities", abilities)
-
-    function listAbilities() {
-        for (const ability of abilities) {
-            return ability.ability.name
-
-        }
-    }
-
 
     return (
         <>
