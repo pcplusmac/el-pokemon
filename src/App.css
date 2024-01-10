@@ -34,7 +34,10 @@
 .poke-header {
   border: 1px solid yellowgreen;
   display: flex;
-  gap:1em;
+  /* gap:1em; */
+  /* justify-content: center; */
+  align-items: center;
+
 }
 
 .pokemon-canvas {
@@ -57,10 +60,10 @@
 }
 nav {
   
-  margin-left: 10px;
+  justify-content: center;
   display: flex;
   gap: 3em;
-  justify-content: center;
+  
   
 }
 

@@ -1,17 +1,24 @@
 import NavBar from "./NavBar";
 import imagelogo from '../images/pikachu-logo.jpg'
 
-export default function Header (){
+export default function Header() {
 
 
-    return(
+    return (
+
         <div className="poke-header">
-            <img src={imagelogo} style={{
-                width:"50px",
-                height:"50px"
-            }}/>
-            <h1>El-pokemon</h1>
+
+            <figure>
+                <img src={imagelogo} style={{
+                    width: "50px",
+                    height: "50px"
+                }} />
+                <figcaption><h3>El-pokemon</h3></figcaption>
+            </figure>
             <NavBar />
         </div>
+
+
+
     )
 }
