@@ -2,7 +2,7 @@ import { useState,createContext } from "react";
 
 const PokemonContext = createContext()
 
-function PokemonContextProvider (children){
+function PokemonContextProvider ({children}){
     const [pokemons,setPokemons]=useState([])
 
     return(

@@ -30,7 +30,7 @@ function App() {
     setPokeState(currentState => [...currentState, data])
   }
 
-  useEffect(() => {fecthPokes()},[])
+  useEffect(() => { fecthPokes() }, [])
 
   const mappedPokeCards = pokeState.map((poke, index) => <PokemondCard key={index} pokemon={poke} />)
   return (
@@ -43,13 +43,19 @@ function App() {
 
 
       <Router>
-        <Header />      
-          <Route exact path="/"><Home /></Route>
+        <Header />
+
+
+        <Route exact path="/"><Home /></Route>
+        <PokemonContextProvider>
           <Route path="/pokemonlist"><MyList /></Route>
-          <Route exact path="/pokedex">         
-              <Pokedex pokeCards={mappedPokeCards} /></Route>
+          <Route exact path="/pokedex">
+          <Pokedex pokeCards={mappedPokeCards} /></Route>
           <Route path="/pokedex/:name" component={PokeSolo} ></Route>
-          <Route path="/aboutus"><AboutUs /></Route>
+        </PokemonContextProvider>
+        <Route path="/aboutus"><AboutUs /></Route>
+
+
       </Router>
     </div>
   );
