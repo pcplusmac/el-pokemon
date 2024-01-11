@@ -1,5 +1,5 @@
 // import { useContext } from "react"
-import {useContext,useHistory, useHistory,useLocation } from "react-router-dom/cjs/react-router-dom.min"
+import {useContext,useHistory,useLocation } from "react-router-dom/cjs/react-router-dom.min"
 import PokemonDetails from "../components/PokemonDetails"
 
 export default function PokeSolo() {
