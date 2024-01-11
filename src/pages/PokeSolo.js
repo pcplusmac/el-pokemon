@@ -5,6 +5,8 @@ import PokemonDetails from "../components/PokemonDetails"
 export default function PokeSolo() {
 
     const history = useHistory()
+    console.log("history",history)
+    console.log("save",state)
     const { state } = useLocation()
     function backClick(){
         history.push(`/pokedex`)
@@ -17,7 +19,7 @@ export default function PokeSolo() {
         
     }
     function saveClick(){
-        console.log()
+        
     }
 
     return (
@@ -30,7 +32,6 @@ export default function PokeSolo() {
             </div>
             <div className="button-container">
                 <button onClick={backClick}>back</button>
-                <button onClick={saveClick}>save to myList</button>
                 <button onClick={saveClick}>save to myList</button>
             </div >
 
