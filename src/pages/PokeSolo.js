@@ -1,11 +1,13 @@
 // import { useContext } from "react"
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min"
+import { useHistory,useLocation } from "react-router-dom/cjs/react-router-dom.min"
 import PokemonDetails from "../components/PokemonDetails"
 
 export default function PokeSolo() {
 
+    const history = useHistory()
     const { state } = useLocation()
     function backClick(){
+        history.push(`/pokedex`)
         
     }
 
