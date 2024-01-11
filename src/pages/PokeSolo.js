@@ -10,6 +10,9 @@ export default function PokeSolo() {
         history.push(`/pokedex`)
         
     }
+    function saveClick(){
+        
+    }
 
     return (
         <>
@@ -21,7 +24,7 @@ export default function PokeSolo() {
             </div>
             <div className="button-container">
                 <button onClick={backClick}>back</button>
-                <button>save to myList</button>
+                <button onClick={saveClick}>save to myList</button>
             </div >
 
         </>
