@@ -1,5 +1,5 @@
 // import { useContext } from "react"
-import {useContext,useHistory, useLocation } from "react-router-dom/cjs/react-router-dom.min"
+import {useContext,useHistory, useHistory,useLocation } from "react-router-dom/cjs/react-router-dom.min"
 import PokemonDetails from "../components/PokemonDetails"
 
 export default function PokeSolo() {
@@ -10,9 +10,15 @@ export default function PokeSolo() {
         history.push(`/pokedex`)
         
     }
-function saveClick (){
+    function saveClick (){
 
-}
+
+        history.push(`/pokedex`)
+        
+    }
+    function saveClick(){
+        console.log()
+    }
 
     return (
         <>
@@ -24,6 +30,7 @@ function saveClick (){
             </div>
             <div className="button-container">
                 <button onClick={backClick}>back</button>
+                <button onClick={saveClick}>save to myList</button>
                 <button onClick={saveClick}>save to myList</button>
             </div >
 

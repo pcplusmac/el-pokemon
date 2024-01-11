@@ -35,17 +35,8 @@ function App() {
   const mappedPokeCards = pokeState.map((poke, index) => <PokemondCard key={index} pokemon={poke} />)
   return (
     <div className="App">
-
-      {/* <PokemonContextProvider>
-        <PokemonCard />
-        <PokemonDetails />
-      </PokemonContextProvider> */}
-
-
       <Router>
         <Header />
-
-
         <Route exact path="/"><Home /></Route>
         <PokemonContextProvider>
           <Route path="/pokemonlist"><MyList /></Route>
@@ -54,8 +45,6 @@ function App() {
           <Route path="/pokedex/:name" component={PokeSolo} ></Route>
         </PokemonContextProvider>
         <Route path="/aboutus"><AboutUs /></Route>
-
-
       </Router>
     </div>
   );
