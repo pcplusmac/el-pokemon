@@ -13,12 +13,12 @@ export default function PokemonDetails({ state }) {
             
             <h3>Weight: <span>{state.weight}</span></h3>
             
-            <h3>Moves: <span></span></h3>
+            <h3>Ablities: <span></span></h3>
             <ul>
-                {state.abilities.map((ability) => {<li>{ability.name}</li>})}
+                {state.abilities.map((ability,index) => (<li key={index}> {ability.ability.name}</li>))}
             </ul>
         
-            <h3>Ablities: </h3>
+            <h3>Moves: </h3>
 
 
         </>
