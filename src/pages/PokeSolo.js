@@ -12,12 +12,14 @@ export default function PokeSolo() {
     console.log("save",state)
     
     const [setPokemons] = useContext(PokemonContext)
+
     function backClick(){
         history.push(`/pokedex`)
         
     }
     
-    function saveClick(){
+    function saveClick(e){
+        
         
     }
 

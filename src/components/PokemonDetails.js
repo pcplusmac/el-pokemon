@@ -19,6 +19,11 @@ export default function PokemonDetails({ state }) {
             </ul>
         
             <h3>Moves: </h3>
+            <ul style={{display:"flex", flexWrap:"wrap", flex:"25%", padding:"5px",gap:"2em"}}>
+                {state.moves.map((move,index) => <li key={index}>{move.move.name}</li>)}
+
+            </ul>
+            
 
 
         </>

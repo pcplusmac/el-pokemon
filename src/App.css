@@ -88,6 +88,11 @@ button {
   font-family: monospace;
   font-weight: bolder;
 }
+li:hover {
+  /* background-color: orange; */
+  font-weight: bolder;
+  color: blue;
+}
 
 @keyframes App-logo-spin {
   from {
