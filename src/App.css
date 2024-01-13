@@ -80,6 +80,11 @@ nav {
   gap: 30em;
   
 }
+.list-container {
+  text-align: left;
+  margin: 10px;
+  padding: 20px;
+}
 
 button {
   background-color: orange;

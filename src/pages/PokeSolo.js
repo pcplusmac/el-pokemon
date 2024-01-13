@@ -25,10 +25,21 @@ export default function PokeSolo() {
     }
 
     function saveClick(e) {
-        setPokemons([...pokemons,pokemon])
-       
+        
+
+        const pokemonConfigObj = {
+            method: 'POST',
+            headers:{'Content-Type': 'application/json'},
+            body:JSON.stringify(pokemon)
+        }
+       fetch('http://localhost:3000/pokemons',pokemonConfigObj)
+        .then(res => res.json())
+        .then(data => addPokemon(data))
     }
-    
+
+    function addPokemon(pokemon) {
+        setPokemons([...pokemons,pokemon])
+    }
     
     return (
         <>
