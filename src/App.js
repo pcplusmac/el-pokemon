@@ -27,7 +27,7 @@ function App() {
           <Route exact path="/pokedex">
             <Pokedex />
           </Route>
-          <Route path="/pokedex/:name" component={PokeSolo} ></Route>
+          <Route path="/pokedex/:name" component={PokeSolo} />
         </PokemonContextProvider>
         <Route path="/aboutus">
           <AboutUs />
