@@ -1,29 +1,27 @@
 // import { useContext } from "react"
 import {useContext,useHistory,useLocation } from "react-router-dom/cjs/react-router-dom.min"
 import PokemonDetails from "../components/PokemonDetails"
+import { PokemonContext } from "../context/PokemonContext"
 
 export default function PokeSolo() {
 
     const history = useHistory()
-    console.log("history",history)
-    console.log("save",state)
+    
     const { state } = useLocation()
+    console.log("save",state)
+    
+    const [setPokemons] = useContext(PokemonContext)
     function backClick(){
         history.push(`/pokedex`)
         
     }
-    function saveClick (){
-
-
-        history.push(`/pokedex`)
-        
-    }
+    
     function saveClick(){
         
     }
 
     return (
-        <>
+        <form onSubmit={saveClick}>
             
             <img id="card-solo" src={state.sprites.back_default} alt={state.name} style={{justifyContent:"center"}} />
 
@@ -32,9 +30,9 @@ export default function PokeSolo() {
             </div>
             <div className="button-container">
                 <button onClick={backClick}>back</button>
-                <button onClick={saveClick}>save to myList</button>
+                <button type="submit"> save to myList</button>
             </div >
 
-        </>
+        </form>
     )
 }

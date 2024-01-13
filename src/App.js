@@ -30,6 +30,7 @@ function App() {
     setPokeState(currentState => [...currentState, data])
   }
 
+  
   useEffect(() => { fecthPokes() }, [])
 
   const mappedPokeCards = pokeState.map((poke, index) => <PokemondCard key={index} pokemon={poke} />)
