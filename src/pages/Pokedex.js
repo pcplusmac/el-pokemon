@@ -1,5 +1,4 @@
 import { useState, useContext,useEffect } from "react"
-import { PokemonContext } from "../context/PokemonContext"
 import PokemonCard from "../components/PokemonCard"
 
 

@@ -3,6 +3,7 @@ import {useHistory,useLocation } from "react-router-dom/cjs/react-router-dom.min
 import PokemonDetails from "../components/PokemonDetails"
 import { PokemonContext } from "../context/PokemonContext"
 
+
 export default function PokeSolo() {
 
     const history = useHistory()
