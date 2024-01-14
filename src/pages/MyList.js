@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react'
 import { PokemonContext } from "../context/PokemonContext"
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 import PokemonDetails from '../components/PokemonDetails'
-process.env.REACT_APP_API_URL
+// process.env.REACT_APP_API_URL
 
 
 
