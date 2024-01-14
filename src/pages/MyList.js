@@ -24,7 +24,7 @@ export default function MyList() {
     function showCardClick(e){
         console.log("myList:",e)
 
-        history.push(`/pokedex/${e.target.value}`)
+        // history.push(`/pokedex/${e.target.value}`)
 
         // return (
         //     <PokemonDetails />
