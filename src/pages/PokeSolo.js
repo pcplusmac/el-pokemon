@@ -11,12 +11,16 @@ export default function PokeSolo() {
     const { state } = useLocation()
     console.log("save", state)
 
-    const pokemon = {
-        name: state.name,
-        height: state.height,
-        weight: state.weight
-    }
-    console.log("pokemon:",pokemon)
+    // const pokemon = {
+    //     name: state.name,
+    //     height: state.height,
+    //     weight: state.weight,
+    //     sprites: {
+    //         back_default: state.sprites.back_default
+
+    //     }
+    // }
+   
     const [pokemons,setPokemons] = useContext(PokemonContext)
 
     function backClick() {
@@ -30,8 +34,9 @@ export default function PokeSolo() {
         const pokemonConfigObj = {
             method: 'POST',
             headers:{'Content-Type': 'application/json'},
-            body:JSON.stringify(pokemon)
+            body:JSON.stringify(state)
         }
+        console.log("obj",pokemonConfigObj)
        fetch('http://localhost:3000/pokemons',pokemonConfigObj)
         .then(res => res.json())
         .then(data => addPokemon(data))
