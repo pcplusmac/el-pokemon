@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 import PokemonDetails from '../components/PokemonDetails'
 import PokemonCard from '../components/PokemonCard'
 
-// process.env.REACT_APP_API_URL
+// 'http://localhost:3000/pokemons'
 
 
 export default function MyList() {
@@ -15,7 +15,7 @@ export default function MyList() {
     // 
 
     async function fecthPokes() {
-        const response = await fetch(`http://localhost:3000/pokemons`)
+        const response = await fetch(process.env.REACT_APP_API_URL)
         const data = await response.json()
         console.log("mylist:", data)
         setPokemons(data)

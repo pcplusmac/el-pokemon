@@ -37,7 +37,7 @@ export default function PokeSolo() {
             body:JSON.stringify(state)
         }
         console.log("obj",pokemonConfigObj)
-       fetch('http://localhost:3000/pokemons',pokemonConfigObj)
+       fetch(process.env.REACT_APP_API_URL,pokemonConfigObj)
         .then(res => res.json())
         .then(data => addPokemon(data))
     }
