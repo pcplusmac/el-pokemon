@@ -10,7 +10,8 @@ import PokemonCard from '../components/PokemonCard'
 export default function MyList() {
     
     const history = useHistory()
-    const [pokemons, setPokemons] = useState([])
+    // const [pokemons, setPokemons] = useState([])
+    const [pokemons,setPokemons] = useContext(PokemonContext)
     console.log("mylist-pokemon:", pokemons)
     // 
 
@@ -18,12 +19,12 @@ export default function MyList() {
         const response = await fetch(process.env.REACT_APP_API_URL)
         const data = await response.json()
         console.log("mylist:", data)
-        setPokemons(data)
+        setPokemons(pokemons)
         // setPokemons(currentState => [...currentState, ...data])
 
     }
 
-    useEffect(() => { fecthPokes() }, [])
+    // useEffect(() => { fecthPokes() }, [])
 
     // function showCardClick(e){
     //     console.log("myList:",e.target.textContent)
@@ -43,7 +44,10 @@ export default function MyList() {
                     {pokemons.map((pokemon, index) => <li key={index} onClick={showCardClick}>{pokemon.name}</li>)}
                 </ol> */}
 
-                {pokemons.map((pokemon, index) => <PokemonCard pokemon={pokemon} />)}
+                {/* {pokemons.map((pokemon, index) => <PokemonCard pokemon={pokemon} />)} */}
+                <ul>
+                    {pokemons}
+                </ul>
             </div>
         </>
     )
