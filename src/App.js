@@ -37,12 +37,12 @@ function App() {
       <div style={{
         margin: "1px",
         padding: "1px",
-        
+        textAlign:"center"
       }}>
         <a href='#top' style={{
             color: "orange",
             fontSize:"30px",
-            weight: "bold"
+            weight: "bold",
             
           }}
         > 

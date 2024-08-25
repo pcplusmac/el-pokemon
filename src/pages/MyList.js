@@ -38,7 +38,7 @@ export default function MyList() {
 
     return (
         <>
-            <h1> My Pokemons:</h1>
+            <h2> My Pokemons:</h2>
 
             <div className="list-container">
 
