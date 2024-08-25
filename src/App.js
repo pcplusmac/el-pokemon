@@ -5,6 +5,7 @@ import AboutUs from './pages/AboutUs';
 import Pokedex from './pages/Pokedex';
 import MyList from './pages/MyList';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import PokeSolo from './pages/PokeSolo';
 import { PokemonContextProvider } from './context/PokemonContext';
 import PokemonDetails from './components/PokemonDetails';
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        <Header id="top"/>
         <Route exact path="/">
           <Home />
         </Route>
@@ -33,6 +34,23 @@ function App() {
           <AboutUs />
         </Route>
       </Router>
+      <div style={{
+        margin: "1px",
+        padding: "1px",
+        
+      }}>
+        <a href='#top' style={{
+            color: "orange",
+            fontSize:"30px",
+            weight: "bold"
+            
+          }}
+        > 
+          back on top
+        </a>
+      </div>
+      
+      <Footer />
     </div>
   );
 }

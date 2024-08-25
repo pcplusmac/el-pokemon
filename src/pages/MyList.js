@@ -14,13 +14,15 @@ export default function MyList() {
     const [pokemons,setPokemons] = useContext(PokemonContext)
     console.log("mylist-pokemon:", pokemons)
     // 
-
+    const pokelist = []
     async function fecthPokes() {
-        const response = await fetch(process.env.REACT_APP_API_URL)
+        const response = await fetch("http://localhost:3000/pokemons")
         const data = await response.json()
         console.log("mylist:", data)
-        setPokemons(pokemons)
+        // setPokemons(data)
         // setPokemons(currentState => [...currentState, ...data])
+        const pokelist = data.map(poke => (<li>heeloo</li>))
+        
 
     }
 
@@ -46,7 +48,7 @@ export default function MyList() {
 
                 {/* {pokemons.map((pokemon, index) => <PokemonCard pokemon={pokemon} />)} */}
                 <ul>
-                    {pokemons}
+                    {pokelist}
                 </ul>
             </div>
         </>
