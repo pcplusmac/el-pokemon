@@ -23,6 +23,7 @@ export default function PokeSolo() {
    
     const [pokemons,setPokemons] = useContext(PokemonContext)
 
+    console.log("state00", pokemons)
     function backClick() {
         history.push(`/pokedex`)
 
@@ -37,13 +38,19 @@ export default function PokeSolo() {
             body:JSON.stringify(state)
         }
         console.log("obj",pokemonConfigObj)
+
        fetch("http://localhost:3000/pokemons",pokemonConfigObj)
         .then(res => res.json())
         .then(data => addPokemon(data))
     }
 
     function addPokemon(pokemon) {
-        setPokemons([...pokemons,pokemon])
+        console.log("add",pokemon)
+        const newPoke = {
+            name: pokemon.name,
+            height: pokemon.height
+        }
+        setPokemons([...pokemons,newPoke])
     }
     
     return (

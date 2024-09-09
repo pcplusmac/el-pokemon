@@ -4,6 +4,7 @@ import PokemonCard from "../components/PokemonCard"
 
 export default function Pokedex (){
 
+    // Create the state for the pokemons get from API.
     const [pokeState, setPokeState] = useState([])
 
     async function fecthPokes() {

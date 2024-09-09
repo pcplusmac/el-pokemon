@@ -26,7 +26,7 @@ export default function MyList() {
 
     }
 
-    // useEffect(() => { fecthPokes() }, [])
+    useEffect(() => { fecthPokes() }, [])
 
     // function showCardClick(e){
     //     console.log("myList:",e.target.textContent)
