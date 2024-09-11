@@ -9,7 +9,7 @@ export default function PokeSolo() {
     const history = useHistory()
 
     const { state } = useLocation()
-    console.log("save", state)
+    console.log("state of save btn", state)
 
     // const pokemon = {
     //     name: state.name,
@@ -22,8 +22,20 @@ export default function PokeSolo() {
     // }
    
     const [pokemons,setPokemons] = useContext(PokemonContext)
+    // const pokemonCon = useContext(PokemonContext)
 
-    console.log("state00", pokemons)
+    console.log("pokemonCon:",pokemons)
+
+    function addPokemon(pokemon) {
+        console.log("add",pokemon)
+        const newPoke = {
+            name: pokemon.name,
+            height: pokemon.height
+        }
+        setPokemons(curr => [...curr,newPoke])
+    }
+
+    // console.log("state00", pokemons)
     function backClick() {
         history.push(`/pokedex`)
 
@@ -44,14 +56,7 @@ export default function PokeSolo() {
         .then(data => addPokemon(data))
     }
 
-    function addPokemon(pokemon) {
-        console.log("add",pokemon)
-        const newPoke = {
-            name: pokemon.name,
-            height: pokemon.height
-        }
-        setPokemons([...pokemons,newPoke])
-    }
+    
     
     return (
         <>

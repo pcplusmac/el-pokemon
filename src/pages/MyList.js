@@ -14,19 +14,31 @@ export default function MyList() {
     const [pokemons,setPokemons] = useContext(PokemonContext)
     console.log("mylist-pokemon:", pokemons)
     // 
-    const pokelist = []
+    
     async function fecthPokes() {
         const response = await fetch("http://localhost:3000/pokemons")
         const data = await response.json()
+        setPokemons(data)
         console.log("mylist:", data)
+        console.log("updated pokemon stat:", pokemons)
         // setPokemons(data)
         // setPokemons(currentState => [...currentState, ...data])
-        const pokelist = data.map(poke => (<li>heeloo</li>))
+        
+    
+
+        // console.log("name:", pokelist)
         
 
     }
+    
+    // const pokelist = pokemons.map((pokemon, index) => <PokemonCard pokemon={pokemon} />)
+
+    const pokelist = pokemons.map((pokemon, index) => <li>{pokemon.name}</li>)
 
     useEffect(() => { fecthPokes() }, [])
+
+    // const name = pokemons.
+    // const pokelist = pokemons.map((poke,index) => (console.log(`{poke.name}`)))
 
     // function showCardClick(e){
     //     console.log("myList:",e.target.textContent)
@@ -45,8 +57,9 @@ export default function MyList() {
                 {/* <ol>
                     {pokemons.map((pokemon, index) => <li key={index} onClick={showCardClick}>{pokemon.name}</li>)}
                 </ol> */}
+                
 
-                {/* {pokemons.map((pokemon, index) => <PokemonCard pokemon={pokemon} />)} */}
+                
                 <ul>
                     {pokelist}
                 </ul>
