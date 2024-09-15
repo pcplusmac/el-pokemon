@@ -15,10 +15,10 @@ function App() {
 
   
   return (
-    <div className="App">
+    <div id="top" className="App">
       
       <Router>
-        <Header id="top"/>
+        <Header />
         <Route exact path="/">
           <Home />
         </Route>
@@ -29,7 +29,10 @@ function App() {
           <Route exact path="/pokedex">
             <Pokedex />
           </Route>
-          <Route path="/pokedex/:name" component={PokeSolo} />
+          {/* <Route path="/pokedex/:name" component={PokeSolo} /> */}
+          <Route path="/pokedex/:name">
+            <PokeSolo />
+          </Route>
         </PokemonContextProvider>
         <Route path="/aboutus">
           <AboutUs />
