@@ -15,6 +15,9 @@ export default function PokeItem({ item }) {
     return (
         <>
              <h3>{name}</h3>
+             <button> back</button>
+             <button>customise name</button>
+            <button>delete</button>
  
          </> 
      )

@@ -63,8 +63,8 @@ export default function MyList() {
                 
                 <ul>
                     {pokelist}
-                    <button>modify</button>
-                    <button>delete</button>
+                    <button>reset</button>
+                    
                 </ul>
 
             </div>
