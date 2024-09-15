@@ -7,6 +7,7 @@ import { PokemonContext } from "../context/PokemonContext"
 
 export default function PokeSolo() {
     const history = useHistory()
+    console.log("history in solo:", history)
 
     const { state } = useLocation()
     console.log("state of save btn", state)
