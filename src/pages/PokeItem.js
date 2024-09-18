@@ -1,23 +1,31 @@
-
+import { useLocation,useHistory } from "react-router-dom/cjs/react-router-dom.min"
+import ItemDetails from "../components/ItemDetails"
 
 
 export default function PokeItem({ item }) {
 
 
 
-    console.log("details:", item)
+    console.log("detailsA:", item.name)
     // const abilities = state.abilities.ability
     // console.log("ability name: ", abilities)
 
-    const name = item.name
+    // const name = item.name
+
+    const history = useHistory()
+    const {state} = useLocation()
+    // const name = state.name
+
 
 
     return (
         <>
-             <h3>{name}</h3>
-             <button> back</button>
-             <button>customise name</button>
-            <button>delete</button>
+             {/* <h3>{name}</h3> */}
+             <div className="solodetails-container">
+                <ItemDetails state={item} />
+            </div>
+             <button> customise name</button>
+             <button>delete</button>
  
          </> 
      )

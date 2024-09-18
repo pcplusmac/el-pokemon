@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import PokeSolo from './pages/PokeSolo';
 import { PokemonContextProvider } from './context/PokemonContext';
 import PokemonDetails from './components/PokemonDetails';
+import PokeItem from './pages/PokeItem';
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
           {/* <Route path="/pokedex/:name" component={PokeSolo} /> */}
           <Route path="/pokedex/:name">
             <PokeSolo />
+          </Route>
+          <Route path = "/pokemonlist/:name">
+            <PokeItem />
           </Route>
         </PokemonContextProvider>
         <Route path="/aboutus">

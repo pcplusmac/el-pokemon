@@ -1,9 +1,8 @@
 import { useState, useEffect, useContext } from 'react'
 import { PokemonContext } from "../context/PokemonContext"
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
-import PokemonDetails from '../components/PokemonDetails'
-import PokemonCard from '../components/PokemonCard'
-import PokeItem from '../components/PokeItem'
+import PokeItem from './PokeItem'
+
 
 // 'http://localhost:3000/pokemons'
 
@@ -34,7 +33,7 @@ export default function MyList() {
     
     // const pokelist = pokemons.map((pokemon, index) => <PokemonCard pokemon={pokemon} />)
 
-    const pokelist = pokemons.map((pokemon, index) => (<li> <PokeItem item={pokemon} /></li>))
+    const pokelist = pokemons.map((pokemon, index) => (<li> <PokeItem index ={index} item={pokemon} /></li>))
 
     useEffect(() => { fecthPokes() }, [])
 
