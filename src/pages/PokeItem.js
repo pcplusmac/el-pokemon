@@ -2,30 +2,56 @@ import { useLocation,useHistory } from "react-router-dom/cjs/react-router-dom.mi
 import ItemDetails from "../components/ItemDetails"
 
 
-export default function PokeItem({ item }) {
+export default function PokeItem({ item,removeItem,updateName }) {
 
 
 
-    console.log("detailsA:", item.name)
+    console.log("detailsA:", item.id)
     // const abilities = state.abilities.ability
     // console.log("ability name: ", abilities)
 
-    // const name = item.name
+    const {id,name} = item
 
     const history = useHistory()
     const {state} = useLocation()
     // const name = state.name
 
+    function handleDelete(){
+        fetch(`http://localhost:3000/pokemons/${id}`, {
+            method: "DELETE"
+        })
+        removeItem(id)
+
+    }
+
+    function handleUpdate(name){
+        fetch(`http://localhost:3000/pokemons/${id}`, {
+            method: "PATCH",
+            headers:{'Content-Type': 'application/json'},
+            body:JSON.stringify({name: name})
+        })
+            .then(r => r.json())
+            .then(data => updateName(data.id, data.name) )
+    }
+
 
 
     return (
         <>
+             <label>
+                Customise the name?
+                <input
+                    type="text"
+                    onChange={e => handleUpdate(e.target.value)}
+                    name = {name}
+                />
+             </label>
              {/* <h3>{name}</h3> */}
              <div className="solodetails-container">
                 <ItemDetails state={item} />
             </div>
-             <button> customise name</button>
-             <button>delete</button>
+             <button onClick={handleUpdate}> customise name</button>
+             <button onClick={handleDelete}>delete</button>
  
          </> 
      )

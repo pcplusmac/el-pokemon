@@ -30,10 +30,26 @@ export default function MyList() {
         
 
     }
+
+    function removeItem(name){
+        const itemscurr = pokemons.filter(pokemon => pokemon.name !== name)
+        setPokemons(itemscurr)
+    }
+
+    function updateName(id,name){
+        const custmisedPoke = pokemons.map(pokemon => {
+            if (pokemon.id === id) {
+                return {...pokemon,name}
+            } else {
+                return pokemon
+            }
+        })
+        setPokemons(custmisedPoke)
+    }
     
     // const pokelist = pokemons.map((pokemon, index) => <PokemonCard pokemon={pokemon} />)
 
-    const pokelist = pokemons.map((pokemon, index) => (<li> <PokeItem index ={index} item={pokemon} /></li>))
+    const pokelist = pokemons.map((pokemon, index) => (<li> <PokeItem index ={index} item={pokemon} removeItem={removeItem} updateName={updateName}/></li>))
 
     useEffect(() => { fecthPokes() }, [])
 
