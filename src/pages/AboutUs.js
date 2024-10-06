@@ -2,7 +2,7 @@ export default function AbooutUs (){
     return (
         <div>
             <h2> About Us</h2>
-            <P>content is under building</P>
+            <h3>content is under building</h3>
         </div>
     )
 }
