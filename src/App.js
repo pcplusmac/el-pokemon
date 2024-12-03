@@ -41,24 +41,25 @@ function App() {
         <Route path="/aboutus">
           <AboutUs />
         </Route>
-      </Router>
-      <div style={{
-        margin: "1px",
-        padding: "1px",
-        textAlign:"center"
-      }}>
-        <a href='#top' style={{
-            color: "orange",
-            fontSize:"30px",
-            weight: "bold",
-            
-          }}
-        > 
-          back on top
-        </a>
-      </div>
       
-      <Footer />
+        <div style={{
+          margin: "1px",
+          padding: "1px",
+          textAlign:"center"
+        }}>
+          <a href='#top' style={{
+              color: "orange",
+              fontSize:"30px",
+              weight: "bold",
+              
+            }}
+          > 
+            back on top
+          </a>
+        </div>
+        
+        <Footer />
+      </Router>
     </div>
   );
 }
