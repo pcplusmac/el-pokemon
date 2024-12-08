@@ -54,7 +54,7 @@ export default function PokeSolo() {
 
         // http://localhost:3000/pokemons
 
-       fetch("https://el-poke-backend.onrender.com",pokemonConfigObj)
+       fetch("http://localhost:3000/pokemons",pokemonConfigObj)
         .then(res => res.json())
         .then(data => addPokemon(data))
     }
